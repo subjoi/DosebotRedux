@@ -23,6 +23,7 @@ import {run as role} from "./role";
 import {run as roles} from "./roles";
 import {run as sei} from "./sei";
 import {legacy as gtoke_legacy} from "./gtoke";
+import {legacy as gsesh_legacy} from "./gsesh";
 
 export const v1commands: { [name: string]: (client: Discord.Client, message: Discord.Message, args: string[]) => void } = {
     "analysis": analysis,
@@ -47,11 +48,13 @@ export const v1commands: { [name: string]: (client: Discord.Client, message: Dis
     "role": role,
     "roles": roles,
     "sei": sei,
-    "gtoke": gtoke_legacy
+    "gtoke": gtoke_legacy,
+    "gsesh": gsesh_legacy
 };
 
 import { applicationCommandData as about_data, performInteraction as about } from "./about";
 import { applicationCommandData as gtoke_data, performInteraction as gtoke } from './gtoke';
+import { applicationCommandData as gsesh_data, performInteraction as gsesh } from './gsesh';
 import { applicationCommandData as info_data,  performInteraction as info_perform } from './info';
 
 export interface V2Command {
@@ -61,6 +64,7 @@ export interface V2Command {
 
 export const v2commands: { [key: string]: V2Command } = {
     "about": { data: about_data, perform: about },
+    "gsesh": { data: gsesh_data, perform: gsesh },
     "gtoke": { data: gtoke_data, perform: gtoke },
     "info":  { data: info_data,  perform: info_perform }
 };
