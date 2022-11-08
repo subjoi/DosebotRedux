@@ -1,3 +1,5 @@
+import Discord from 'discord.js';
+
 import * as Helpers from './helpers.js';
 
 // Function for creating combo message
