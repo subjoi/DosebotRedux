@@ -11,7 +11,7 @@ function triggerForGuild(guild: Discord.Guild | null | undefined) {
       return "--";
     }
     switch (guild.id) {
-      // case "253612214148136981": return "."; // Drugs Community
+      // case "631032014799241217": return "."; // r/Droger Community
       default:                   return "--";
     }
 }
