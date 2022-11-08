@@ -5,17 +5,6 @@
 // to take a sanitized array of arguments.
 function triggerForGuild(guild: Discord.Guild | null | undefined) {
     if (null != (process.env.TRIGGER)) {
-        return process.env.TRIGGER;
-    }
-    if (null == guild || undefined == guild) {
-      return "--";
-    }
-    switch (guild.id) {
-      // case "253612214148136981": return "."; // Drugs Community
-      default:                   return "--";
-    }
-}
-
 import Discord from "discord.js";
 import { v1commands, v2commands, V2Command } from "./commands/index";
 
